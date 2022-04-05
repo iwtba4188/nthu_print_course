@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 399px;
+    width: 299px;
+    font-size: 14px;
+
+    background-image: url("./image/background.png");
+    background-size: contain;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+img.github.icon {
+    filter: invert(100);
+    max-width: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.link {
+    font-size: 12px;
+    color: #313131;
+}
+
+a.link:hover {
+    color: #e7e7e7;
+}
+
+p {
+    font-size: 10px;
+    color: #e7e7e7;
+}
+
+div.version {
+    position: absolute;
+    top: 94%;
+    right: 1%;
+    user-select: none;
+}
+
+button {
+    /* position */
+    position: relative;
+    left: 0px;
+
+    /* size */
+    width: 42px;
+    height: 20px;
+
+    /* style */
+    background-size: cover;
+    background-position: -1px center;
+    border-radius: 4px;
+    border: 0px;
+}
+
+button:hover {
+    filter: brightness(0.9);
+    transition: 0.1s;
+}
+
+.on_btn {
+    background-image: url("./image/on_button.png");
+}
+
+.off_btn {
+    background-image: url("./image/off_button.png");
+}
+
+.empty_btn {
+    background-image: url("./image/empty_button.png");
+}
+
+div.btn_set.profile {
+    position: absolute;
+    top: 95px;
+    right: 40px;
+}
+
+div.btn_set.course_list {
+    position: absolute;
+    top: 170px;
+    right: 40px;
+}
+
+div.btn_set.course_blue {
+    position: absolute;
+    top: 195px;
+    right: 40px;
+}
+
+div.btn_set.course_table {
+    position: absolute;
+    top: 271px;
+    right: 40px;
+}
+
+div.btn_set.course_number {
+    position: absolute;
+    top: 297px;
+    right: 40px;
+}
+
+div.btn_set.course_room {
+    position: absolute;
+    top: 322px;
+    right: 40px;
+}
+
+div.btn_set.course_eng_name {
+    position: absolute;
+    top: 347px;
+    right: 40px;
+}
+
+div.github_link {
+    cursor: pointer;
+    position: absolute;
+    bottom: 3px;
+    left: 20%;
+    user-select: none;
+}

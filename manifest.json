@@ -1,0 +1,29 @@
+{
+    "name": "nthu_print_course",
+    "description": "print out the course in NTHU AIS",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "scripting",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "30": "/image/icon/icon_30.png",
+            "60": "/image/icon/icon_60.png",
+            "90": "/image/icon/icon_90.png"
+        }
+    },
+    "icons": {
+        "30": "/image/icon/icon_30.png",
+        "60": "/image/icon/icon_60.png",
+        "90": "/image/icon/icon_90.png"
+    }
+}
