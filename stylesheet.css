@@ -40,7 +40,7 @@ p {
     color: #e7e7e7;
 }
 
-div.version {
+span.version {
     position: absolute;
     top: 94%;
     right: 1%;
@@ -80,49 +80,49 @@ button:hover {
     background-image: url("./image/empty_button.png");
 }
 
-div.btn_set.profile {
+span.btn_set.profile {
     position: absolute;
     top: 95px;
     right: 40px;
 }
 
-div.btn_set.course_list {
+span.btn_set.course_list {
     position: absolute;
     top: 170px;
     right: 40px;
 }
 
-div.btn_set.course_blue {
+span.btn_set.course_blue {
     position: absolute;
     top: 195px;
     right: 40px;
 }
 
-div.btn_set.course_table {
+span.btn_set.course_table {
     position: absolute;
     top: 271px;
     right: 40px;
 }
 
-div.btn_set.course_number {
+span.btn_set.course_number {
     position: absolute;
     top: 297px;
     right: 40px;
 }
 
-div.btn_set.course_room {
+span.btn_set.course_room {
     position: absolute;
     top: 322px;
     right: 40px;
 }
 
-div.btn_set.course_eng_name {
+span.btn_set.course_eng_name {
     position: absolute;
     top: 347px;
     right: 40px;
 }
 
-div.github_link {
+span.github_link {
     cursor: pointer;
     position: absolute;
     bottom: 3px;
