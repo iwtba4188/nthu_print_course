@@ -30,6 +30,7 @@ function set_button_status() {
 
 function change_btn_type(button) {
 
+    if (button.className == "empty_btn") { return; }
     button.className = ((button.className == "on_btn") ? "off_btn" : "on_btn");
 }
 
@@ -45,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     set_button_status();
 
     btn_profile.addEventListener('click', function () {
+
+        if (btn_profile.className == "empty_btn") { return; }
+
         change_btn_type(btn_profile);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "profile": !result.profile });
@@ -52,6 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_list.addEventListener('click', function () {
+
+        if (btn_course_list.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_list);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_list": !result.course_list });
@@ -65,6 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_blue.addEventListener('click', function () {
+
+        if (btn_course_blue.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_blue);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_blue": !result.course_blue });
@@ -72,6 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_table.addEventListener('click', function () {
+
+        if (btn_course_table.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_table);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_table": !result.course_table });
@@ -89,6 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_number.addEventListener('click', function () {
+
+        if (btn_course_number.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_number);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_number": !result.course_number });
@@ -96,6 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_room.addEventListener('click', function () {
+
+        if (btn_course_room.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_room);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_room": !result.course_room });
@@ -103,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btn_course_eng_name.addEventListener('click', function () {
+
+        if (btn_course_eng_name.className == "empty_btn") { return; }
+
         change_btn_type(btn_course_eng_name);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_eng_name": !result.course_eng_name });
@@ -110,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('github_link').addEventListener('click', function () {
+
         chrome.tabs.create({
             url: "https://github.com/iwtba4188/nthu_print_course",
             active: true
