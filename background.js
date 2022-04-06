@@ -1,7 +1,10 @@
 async function main_function() {
+
     // @getObjectFromLocalStorage function modifying from https://gist.github.com/sumitpore/47439fcd86696a71bf083ede8bbd5466
     const getObjectFromLocalStorage = async function () {
+
         return new Promise((resolve, reject) => {
+
             try {
                 chrome.storage.local.get(null, function (value) {
                     resolve(value);
@@ -63,6 +66,9 @@ async function main_function() {
         print_content += origin_table_content;
     }
 
+    if (print_content == "") {
+        print_content = "你為什麼要這樣XDD";
+    }
 
     var print_window = window.open('', '', '');
     html_content = `
@@ -89,7 +95,9 @@ async function main_function() {
 }
 
 chrome.runtime.onInstalled.addListener((details) => {
+
     chrome.storage.local.get(function (result) {
+
         if (result.profile == undefined) { chrome.storage.local.set({ "profile": true }) }
         if (result.course_list == undefined) { chrome.storage.local.set({ "course_list": true }) }
         if (result.course_blue == undefined) { chrome.storage.local.set({ "course_blue": true }) }
@@ -112,6 +120,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     if (info.menuItemId !== "print_in_nthu_ais") { return }
 
     chrome.scripting.executeScript({
+
         target: { tabId: tab.id },
         function: main_function,
     });
