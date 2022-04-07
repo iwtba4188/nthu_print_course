@@ -21,6 +21,8 @@ async function main_function() {
 
     // 確認是否為課表頁面
     var course_window = window.frames["main"];
+    if (settings.tester >= 10) { course_window = window };
+
     head_data = course_window.document.head.getElementsByTagName("title")[0].innerHTML;
     if (head_data != "網路選課清單") { return; }
 
@@ -105,6 +107,8 @@ chrome.runtime.onInstalled.addListener((details) => {
         if (result.course_number == undefined) { chrome.storage.local.set({ "course_number": true }) }
         if (result.course_room == undefined) { chrome.storage.local.set({ "course_room": true }) }
         if (result.course_eng_name == undefined) { chrome.storage.local.set({ "course_eng_name": true }) }
+
+        if (result.tester == undefined) { chrome.storage.local.set({ 'tester': 0 }) }
     });
 });
 

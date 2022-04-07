@@ -5,6 +5,7 @@ let btn_course_table = document.getElementById('course_table');
 let btn_course_number = document.getElementById('course_number');
 let btn_course_room = document.getElementById('course_room');
 let btn_course_eng_name = document.getElementById('course_eng_name');
+let div_ver = document.getElementById('ver');
 
 function set_button_status() {
 
@@ -128,6 +129,21 @@ document.addEventListener('DOMContentLoaded', function () {
         change_btn_type(btn_course_eng_name);
         chrome.storage.local.get(function (result) {
             chrome.storage.local.set({ "course_eng_name": !result.course_eng_name });
+        });
+    });
+
+    div_ver.addEventListener('click', function () {
+
+        chrome.storage.local.get(function (result) {
+
+            chrome.storage.local.set({ 'tester': result.tester + 1 });
+
+            if (result.tester == 9) {
+                alert("you are tester now");
+                chrome.contextMenus.update("print_in_nthu_ais", {
+                    "documentUrlPatterns": []
+                });
+            }
         });
     });
 
